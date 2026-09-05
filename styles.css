@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #222;
+  margin: 0;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+span {
+  display: inline-block;
+}
+
+/* Book row backgrounds */
+
+tr[class="read"] {
+  background-image: linear-gradient(
+    to right,
+    #d9f7e3,
+    #ffffff
+  );
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(
+    to right,
+    #fff3cd,
+    #ffffff
+  );
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(
+    to right,
+    #dbeafe,
+    #ffffff
+  );
+}
+
+/* Status */
+
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid #d39e00;
+  background-image: linear-gradient(
+    to right,
+    #fff3cd,
+    #ffe69c
+  );
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid #198754;
+  background-image: linear-gradient(
+    to right,
+    #d1e7dd,
+    #a3cfbb
+  );
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid #0d6efd;
+  background-image: linear-gradient(
+    to right,
+    #cfe2ff,
+    #9ec5fe
+  );
+}
+
+/* Status and rating size */
+
+span[class="status"],
+span[class^="rate"] {
+  height: 30px;
+  width: 100px;
+  padding: 5px;
+}
+
+/* Rating circles */
+
+span[class^="rate"] > span {
+  border: 1px solid #555;
+  border-radius: 50%;
+  margin: 2px;
+  height: 12px;
+  width: 12px;
+  background-color: #ddd;
+}
+
+/* One-star rating */
+
+span[class~="one"] > span:first-child {
+  background-image: linear-gradient(
+    to bottom,
+    #ffd700,
+    #f0b400
+  );
+}
+
+/* Two-star rating */
+
+span[class~="two"] > span:nth-child(-n+2) {
+  background-image: linear-gradient(
+    to bottom,
+    #ffd700,
+    #f0b400
+  );
+}
+
+/* Three-star rating */
+
+span[class~="three"] > span {
+  background-image: linear-gradient(
+    to bottom,
+    #ffd700,
+    #f0b400
+  );
+}
